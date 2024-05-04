@@ -38,7 +38,7 @@ const SingleRoute = () => {
               <h2 className="productName">{productData?.brand}</h2>
               <div className="comment">(32 reviews)</div>
               <h4>
-                <span>$38</span>
+                <span>${productData?.price}</span>
                 <div className="chegirma">
                   {productData?.discountPercentage}% Off
                   <p>$ {productData?.price}</p>
