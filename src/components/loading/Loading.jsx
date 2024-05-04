@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Loading.css"
 
-function Loading({count=4}) {
+function Loading({count=10}) {
   return (
     <div className='skeleton__wrapper container'>
         {

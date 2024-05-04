@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useState, useEffect } from "react";
 import "./SingleRoute.css";
 import { NavLink } from "react-router-dom";
 import savatcha from "../../assets/images/savatcha.svg";
@@ -11,15 +11,27 @@ import category from "../../assets/images/category.svg";
 import price from "../../assets/images/price.svg";
 import products from "../../assets/images/products.svg";
 import Wrapper from "../../components/shopSection/Wrapper";
+import { useParams } from "react-router-dom";
+import axios from "../../components/api/";
 
 const SingleRoute = () => {
+  const { id } = useParams();
+  const [productData, setProductData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`products/${id}`)
+      .then((res) => setProductData(res.data.products))
+      .catch((res) => console.log(res));
+  }, []);
   return (
     <div className="singlePage">
       <div className="container productAbout">
         <div className="more_about_the_product">
           <div id="product__about">
             <div className="product_img">
-              <img src={product} alt="" />
+              {/* <img src={product} alt="" /> */}
+              <img src={productData?.image} alt="" />
             </div>
             <div className="product_desc">
               <button className="smallBtn">Sale Off</button>
@@ -51,7 +63,7 @@ const SingleRoute = () => {
               </div>
 
               <div className="product_about_more">
-                <input type="number" name="number" id="number" />
+                <input type="number" name="number" id="number" value={1} />
                 <button className="card_add_btn">
                   <img src={savatcha} alt="savtcha" className="savatcha" />
                   Add to cart
@@ -68,22 +80,22 @@ const SingleRoute = () => {
 
           <div>
             <h5>
-              <img src={mahsulotlar} alt="products" />
+              <img src={mahsulotlar} alt="products" id="mahsulotlar" />
             </h5>
           </div>
           <div className="card_text">
-            <img src={text} alt="" />
+            <img src={text} alt="desc" id="product_desc_text" />
           </div>
         </div>
         <div>
           <h4>
-            <img src={category} alt="" />
+            <img src={category} alt="category" id="category" />
           </h4>
           <h4>
-            <img src={price} alt="" />
+            <img src={price} alt="price" id="price" />
           </h4>
           <h4>
-            <img src={products} alt="" />
+            <img src={products} alt="products" id="product" />
           </h4>
         </div>
       </div>

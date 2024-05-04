@@ -49,6 +49,7 @@ h1 a.active {
 .box-3 {
   margin-top: 100px;
 }
+
 .admin_panel_about #help {
   font-family: Quicksand;
   font-size: 24px;
@@ -141,6 +142,7 @@ ul li p {
 
 .forma {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   gap: 60px;
@@ -177,6 +179,7 @@ ul li p {
 
 #input_text {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -196,6 +199,7 @@ ul li p {
 
 #textarea {
   max-width: 890px;
+  width: 100%;
   height: 200px;
   border: 1px solid #ececec;
   outline: none;
@@ -217,4 +221,39 @@ ul li p {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 30px;
+}
+
+@media (max-width: 1380px) {
+  #women_img {
+    display: none;
+  }
+
+  .forma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 970px) {
+  #input_text {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+  }
+
+  #text,
+  #email,
+  #call2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #btn_submit {
+    width: 100%;
+  }
 }

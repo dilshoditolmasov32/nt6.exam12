@@ -7,6 +7,7 @@ import Categoreis from "../../components/categories/Categoreis";
 import Wrapper from "../../components/shopSection/Wrapper";
 import Swipper from "../../components/swiper/Swipper";
 import axios from "../../components/api";
+
 const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);

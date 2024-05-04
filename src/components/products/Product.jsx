@@ -1,17 +1,16 @@
 import React, { useState, useEffect, memo } from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
+
 import "./Product.css";
 import savatcha from "../../assets/images/card.svg";
 import Loading from "../loading/Loading";
 import Category from "../category/Category";
 
 const Product = ({ data, loading }) => {
-  console.log();
   let cards = data?.map((element) => (
     <div className="product" key={element.id}>
       <div className="product-img">
-        <NavLink to={"/single"}>
+        <NavLink to={`/product/${element.id}`}>
           <img
             src={element.images[0]}
             alt={element.title}

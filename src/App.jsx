@@ -14,12 +14,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/single" element={<SingleRoute />} />
+        <Route path="/product/:id" element={<SingleRoute />} />
         <Route path="/login" element={<LoginMui />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<Notpage404 />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

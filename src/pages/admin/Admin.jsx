@@ -104,27 +104,38 @@ const Admin = () => {
               Your email address will not be published. Required fields are
               marked *
             </p>
+            <div className="forma_input_area">
+              <div id="input_text">
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
 
-            <div id="input_text">
-              <input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="First Name"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-
-            <div id="input_text">
-              <input type="tel" placeholder="Your Phone" required />
-              <input type="text" name="text" id="text" placeholder="Subject" />
+              <div id="input_text">
+                <input
+                  type="tel"
+                  placeholder="Your Phone"
+                  id="call2"
+                  required
+                />
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Subject"
+                />
+              </div>
             </div>
 
             <div>
@@ -136,12 +147,12 @@ const Admin = () => {
             </button>
           </div>
           <div>
-            <img src={women} alt="women" />
+            <img src={women} alt="women" id="women_img" />
           </div>
         </form>
       </div>
 
-      {/* <Wrapper /> */}
+      <Wrapper />
     </div>
   );
 };
