@@ -1,0 +1,21 @@
+.notPage404 h2 {
+  text-align: center;
+  font-size: 64px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(7, 7, 7);
+}
+
+.notPage__image img {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.notPage__image {
+  display: flex;
+  justify-content: center;
+}

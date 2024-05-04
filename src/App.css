@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+.container {
+  max-width: 1650px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(../src/assets//fonts/Quicksand-Regular.ttf);
+}
+
+a {
+  text-decoration-line: none;
+}
